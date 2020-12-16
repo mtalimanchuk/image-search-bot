@@ -1,0 +1,4 @@
+image-similarity-measures
+python-telegram-bot
+sqlalchemy
+environs
