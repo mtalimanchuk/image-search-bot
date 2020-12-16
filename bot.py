@@ -101,10 +101,11 @@ def check_image(update, context):
     similar = find_similar(image_buf, image_size, save_path, message_link)
     if similar:
         score, link = similar
-        update.message.reply_text(
-            f"Мы на {int(score)}% уверены, что это уже было {link or ''}",
-            disable_web_page_preview=True,
-        )
+        reply_text = f"Мы на {int(score)}% уверены, что это уже было {link or ''}"
+    else:
+        reply_text = "Такой картинки еще не было"
+
+    update.message.reply_text(reply_text, disable_web_page_preview=True)
 
 
 def error_callback(update, context):
