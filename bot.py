@@ -69,7 +69,7 @@ def find_similar(image_buf, image_size, save_path, message_link):
         old_image = cv2.resize(old_image, image_size)
         psnr_score = psnr(new_img, old_image)
         # logging.info(f"{old_image_path.name}: psnr {psnr_score}")
-        if psnr_score > PSNR_TRESHOLD:
+        if psnr_score > PSNR_THRESHOLD:
             psnr_score = psnr_score if not np.isinf(psnr_score) else 100
             return psnr_score, p.message_link
 
