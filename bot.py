@@ -17,7 +17,7 @@ from telegram.ext import (
 from telegram.ext.dispatcher import run_async
 
 from db import Session, User, Picture
-from config import TOKEN, PSNR_TRESHOLD, IMAGE_DIR
+from config import TOKEN, PSNR_THRESHOLD, IMAGE_DIR
 
 
 logging.basicConfig(
